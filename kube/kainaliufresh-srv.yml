@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kainaliufresh
+  namespace: default
+spec:
+  ports:
+    - port: 99
+      targetPort: 80
+  selector:
+    service: kainaliufresh
+  type: NodePort

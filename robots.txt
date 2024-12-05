@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://kainaliufresh.com/sitemap.xml
+
+# Block access to specific folders
+Disallow: /css/
+Disallow: /js/

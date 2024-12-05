@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  labels:
+    service: kainaliufresh
+  name: kainaliufresh
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      service: kainaliufresh
+  template:
+    metadata:
+      labels:
+        service: kainaliufresh
+    spec:
+      containers:
+        - image: zquestz/kainaliufresh:latest
+          imagePullPolicy: Always
+          name: kainaliufresh
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "16Mi"
+      restartPolicy: Always

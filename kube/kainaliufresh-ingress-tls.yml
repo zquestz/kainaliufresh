@@ -1,0 +1,40 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kainaliufresh-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/tls-acme: "true"
+spec:
+  ingressClassName: "nginx"
+  tls:
+    - hosts:
+        - www.kainaliufresh.com
+        - kainaliufresh.com
+      secretName: kainaliufresh-tls
+  defaultBackend:
+    service:
+      name: kainaliufresh
+      port:
+        number: 99
+  rules:
+    - host: kainaliufresh.com
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: kainaliufresh
+                port:
+                  number: 99
+    - host: www.kainaliufresh.com
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: kainaliufresh
+                port:
+                  number: 99
