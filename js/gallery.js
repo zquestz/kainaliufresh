@@ -29,6 +29,36 @@ const galleryImages = [
     large: "img/large/produce-4.webp",
     alt: "Fresh Island Mushrooms",
   },
+  {
+    thumb: "img/produce-5.webp",
+    large: "img/large/produce-5.webp",
+    alt: "Fresh Island Produce",
+  },
+  {
+    thumb: "img/produce-6.webp",
+    large: "img/large/produce-6.webp",
+    alt: "Fresh Island Produce",
+  },
+  {
+    thumb: "img/produce-7.webp",
+    large: "img/large/produce-7.webp",
+    alt: "Fresh Island Produce",
+  },
+  {
+    thumb: "img/bread.webp",
+    large: "img/large/bread.webp",
+    alt: "Fresh Island Bread",
+  },
+  {
+    thumb: "img/dried-fruit.webp",
+    large: "img/large/dried-fruit.webp",
+    alt: "Dried Fruit",
+  },
+  {
+    thumb: "img/produce-8.webp",
+    large: "img/large/produce-8.webp",
+    alt: "Fresh Island Produce",
+  },
 ];
 
 let currentImageIndex = 0;
